@@ -1,5 +1,9 @@
 # NIGHT SHIFT — bring-the-humans-03
 
+[![make.fun · bring-the-humans-03](https://make.fun/badge/bring-the-humans-03.svg)](https://make.fun/bounty/bring-the-humans-03?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-03)
+[![rank](https://make.fun/badge/bring-the-humans-03/jusst01/makefun-tiktok-lively/rank.svg)](https://make.fun/bounty/bring-the-humans-03/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-03)
+[![reward](https://make.fun/badge/bring-the-humans-03/jusst01/makefun-tiktok-lively/reward.svg)](https://make.fun/bounty/bring-the-humans-03?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-03)
+
 A 26-second vertical TikTok ad for the make.fun bounty
 [**bring-the-humans-03 — "Bring the humans with a TikTok ad"**](https://make.fun/bounty/bring-the-humans-03).
 
