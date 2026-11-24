@@ -13,7 +13,7 @@
  *   MAKEFUN_OUTPUT_DIR  destination directory (default: /output)
  */
 
-import { copyFile, mkdir, stat } from "node:fs/promises";
+import { copyFile, mkdir, readFile, stat } from "node:fs/promises";
 import { join } from "node:path";
 import process from "node:process";
 
@@ -58,6 +58,24 @@ async function main(): Promise<void> {
     fail(
       `cannot copy ${src} -> ${dest}: ` +
         `${(err as NodeJS.ErrnoException).code ?? String(err)}`,
+    );
+  }
+
+  let srcBytes: Buffer;
+  let destBytes: Buffer;
+  try {
+    [srcBytes, destBytes] = await Promise.all([readFile(src), readFile(dest)]);
+  } catch (err) {
+    fail(
+      `cannot read back ${src} and ${dest} for verification: ` +
+        `${(err as NodeJS.ErrnoException).code ?? String(err)}`,
+    );
+  }
+
+  if (!srcBytes.equals(destBytes)) {
+    fail(
+      `copied file does not match the source: ${dest} differs from ${src} ` +
+        `(${destBytes.length} bytes vs ${srcBytes.length} bytes)`,
     );
   }
 
